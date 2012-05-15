@@ -6,8 +6,8 @@
 
 Name: dee
 Summary: Model to synchronize mutiple instances over DBus
-Version: 0.5.22
-Release: 2
+Version: 1.0.10
+Release: 1
 License: LGPLv2+
 Group: System/Libraries
 Source0: http://launchpad.net/dee/0.5/%{version}/+download/dee-%{version}.tar.gz
