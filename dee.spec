@@ -1,7 +1,7 @@
-%define lib_major 1
+%define lib_major 4
 %define api 1.0
 %define libname %mklibname dee %{api} %{lib_major}
-%define gi_name %mklibname dee-gir 0.5
+%define gi_name %mklibname dee-gir 1.0
 %define libnamedev %mklibname -d dee
 
 Name: dee
@@ -10,7 +10,7 @@ Version: 1.0.10
 Release: 1
 License: LGPLv2+
 Group: System/Libraries
-Source0: http://launchpad.net/dee/0.5/%{version}/+download/dee-%{version}.tar.gz
+Source0: http://launchpad.net/dee/1.0/%{version}/+download/dee-%{version}.tar.gz
 URL: https://launchpad.net/dee
 BuildRequires: pkgconfig(dbus-glib-1)
 BuildRequires: pkgconfig(glib-2.0) >= 2.26
@@ -75,7 +75,7 @@ rm -fr %{buildroot}%py_platsitedir
 %{_libdir}/libdee-%{api}.so.%{lib_major}*
 
 %files -n %{gi_name}
-%{_libdir}/girepository-1.0/Dee-0.5.typelib
+%{_libdir}/girepository-1.0/Dee-1.0.typelib
 
 %files -n %{libnamedev}
 %{_libdir}/*.so
