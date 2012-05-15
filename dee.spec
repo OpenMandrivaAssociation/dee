@@ -78,6 +78,7 @@ rm -fr %{buildroot}%py_platsitedir
 %{_libdir}/girepository-1.0/Dee-1.0.typelib
 
 %files -n %{libnamedev}
+%{_bindir}/dee-tool
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
 %{_includedir}/*
