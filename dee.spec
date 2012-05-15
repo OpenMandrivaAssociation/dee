@@ -21,6 +21,7 @@ BuildRequires: pkgconfig(gio-unix-2.0) >= 2.26
 BuildRequires: gobject-introspection-devel
 BuildRequires: vala-tools
 BuildRequires: vala-devel
+BuildRequires: icu-devel
 
 %description
 Libdee is a library that uses DBus to provide objects allowing you to create
