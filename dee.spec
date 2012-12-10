@@ -87,3 +87,14 @@ rm -fr %{buildroot}%py_platsitedir
 %{_datadir}/vala/vapi/*
 
 
+
+
+%changelog
+* Tue May 15 2012 Crispin Boylan <crisb@mandriva.org> 1.0.10-1
++ Revision: 799098
+- New release
+
+* Tue Nov 01 2011 Matthew Dawkins <mattydaw@mandriva.org> 0.5.22-2
++ Revision: 708162
+- imported package dee
+
