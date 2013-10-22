@@ -1,12 +1,12 @@
 %define lib_major 4
 %define api 1.0
 %define libname %mklibname dee %{api} %{lib_major}
-%define gi_name %mklibname dee-gir 1.0
+%define gi_name %mklibname dee-gir %{api}
 %define libnamedev %mklibname -d dee
 
 Name: dee
 Summary: Model to synchronize mutiple instances over DBus
-Version: 1.0.10
+Version: 1.0.14
 Release: 1
 License: LGPLv2+
 Group: System/Libraries
@@ -22,6 +22,7 @@ BuildRequires: gobject-introspection-devel
 BuildRequires: vala-tools
 BuildRequires: vala-devel
 BuildRequires: icu-devel
+
 
 %description
 Libdee is a library that uses DBus to provide objects allowing you to create
@@ -64,21 +65,25 @@ This package contains files that are needed to build applications.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 rm -f %{buildroot}%{_libdir}/*.la
-# remove python binding because it is not working according to upstream
-rm -fr %{buildroot}%py_platsitedir
+
+%files
+%doc ChangeLog README TODO COPYING COPYING.GPL
+%{_bindir}/dee-tool
+%{python_sitearch}/gi/overrides/Dee.*
 
 %files -n %{libname}
+%doc ChangeLog README TODO COPYING COPYING.GPL
 %{_libdir}/libdee-%{api}.so.%{lib_major}*
 
 %files -n %{gi_name}
-%{_libdir}/girepository-1.0/Dee-1.0.typelib
+%doc ChangeLog README TODO COPYING COPYING.GPL
+%{_libdir}/girepository-1.0/Dee-%{api}.typelib
 
 %files -n %{libnamedev}
-%{_bindir}/dee-tool
+%doc ChangeLog README TODO COPYING COPYING.GPL
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
 %{_includedir}/*
@@ -89,12 +94,4 @@ rm -fr %{buildroot}%py_platsitedir
 
 
 
-%changelog
-* Tue May 15 2012 Crispin Boylan <crisb@mandriva.org> 1.0.10-1
-+ Revision: 799098
-- New release
-
-* Tue Nov 01 2011 Matthew Dawkins <mattydaw@mandriva.org> 0.5.22-2
-+ Revision: 708162
-- imported package dee
 
