@@ -7,7 +7,7 @@
 Name: dee
 Summary: Model to synchronize mutiple instances over DBus
 Version: 1.0.14
-Release: 2
+Release: 3
 License: LGPLv2+
 Group: System/Libraries
 Source0: http://launchpad.net/dee/1.0/%{version}/+download/dee-%{version}.tar.gz
@@ -61,7 +61,7 @@ This package contains files that are needed to build applications.
 %setup -q
 
 %build
-%configure2_5x --disable-static
+%configure --disable-static
 %make
 
 %install
