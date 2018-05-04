@@ -74,6 +74,7 @@ rm -f %{buildroot}%{_libdir}/*.la
 %doc ChangeLog README TODO COPYING COPYING.GPL
 %{_bindir}/dee-tool
 %{python_sitearch}/gi/overrides/Dee.*
+%{python_sitearch}/gi/overrides/__pycache__/*
 
 %files -n %{libname}
 %doc ChangeLog README TODO COPYING COPYING.GPL
@@ -91,8 +92,3 @@ rm -f %{buildroot}%{_libdir}/*.la
 %{_datadir}/gtk-doc/html/dee-*
 %{_datadir}/gir-1.0/*.gir
 %{_datadir}/vala/vapi/*
-
-
-
-
-
