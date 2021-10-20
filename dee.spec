@@ -7,10 +7,15 @@
 Name: dee
 Summary: Model to synchronize mutiple instances over DBus
 Version: 1.2.7
-Release: 2
+Release: 3
 License: LGPLv2+
 Group: System/Libraries
 Source0: http://launchpad.net/dee/1.0/%{version}/+download/dee-%{version}.tar.gz
+Patch0: vapi-skip-properties.patch
+Patch1: strict-prototype.patch
+Patch2: dee-1.2.7-deprecated-g_type_class_add_private.patch
+Patch3: build_no_werror.patch
+
 URL: https://launchpad.net/dee
 BuildRequires: pkgconfig(dbus-glib-1)
 BuildRequires: pkgconfig(glib-2.0) >= 2.26
