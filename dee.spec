@@ -15,6 +15,7 @@ Patch0: vapi-skip-properties.patch
 Patch1: strict-prototype.patch
 Patch2: dee-1.2.7-deprecated-g_type_class_add_private.patch
 Patch3: build_no_werror.patch
+Patch4: dee-1.2.7-gcc6-fixes.patch
 
 URL: https://launchpad.net/dee
 BuildRequires: pkgconfig(dbus-glib-1)
