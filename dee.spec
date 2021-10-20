@@ -64,14 +64,15 @@ This package contains files that are needed to build applications.
 
 %prep
 %setup -q
+%autopatch -p1
 sed -e 's:-Werror::g' -i configure.ac
 
 %build
 %configure --disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 rm -f %{buildroot}%{_libdir}/*.la
 
