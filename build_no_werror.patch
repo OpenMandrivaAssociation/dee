@@ -1,0 +1,39 @@
+Description: <short summary of the patch>
+ TODO: Put a short summary on the line above and replace this paragraph
+ with a longer explanation of this change. Complete the meta-information
+ with other relevant fields (see below for details). To make it easier, the
+ information below has been extracted from the changelog. Adjust it or drop
+ it.
+ .
+ dee (1.2.7+17.10.20170616-4ubuntu2) eoan; urgency=medium
+ .
+   * configure.ac:
+     - Don't build with Werror, it makes the build fail on some glib
+       deprecations (lp: #1843730)
+Author: Sebastien Bacher <seb128@ubuntu.com>
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1843730
+
+---
+The information above should follow the Patch Tagging Guidelines, please
+checkout http://dep.debian.net/deps/dep3/ to learn about the format. Here
+are templates for supplementary fields that you might want to add:
+
+Origin: <vendor|upstream|other>, <url of original patch>
+Bug: <url in upstream bugtracker>
+Bug-Debian: https://bugs.debian.org/<bugnumber>
+Bug-Ubuntu: https://launchpad.net/bugs/<bugnumber>
+Forwarded: <no|not-needed|url proving that it has been forwarded>
+Reviewed-By: <name and email of someone who approved the patch>
+Last-Update: <YYYY-MM-DD>
+
+--- dee-1.2.7+17.10.20170616.orig/configure.ac
++++ dee-1.2.7+17.10.20170616/configure.ac
+@@ -121,7 +121,7 @@ AC_ARG_ENABLE([maintainer-flags],
+ MAINTAINER_CFLAGS=""
+ AS_IF([test "x$enable_maintainer_flags" = "xyes" && test "x$GCC" = "xyes"],
+       [
+-        MAINTAINER_CFLAGS="-Werror -Wall -Wcast-align -Wno-uninitialized -Wempty-body -Wformat-security -Winit-self -Wno-error=deprecated-declarations"
++        MAINTAINER_CFLAGS="-Wall -Wcast-align -Wno-uninitialized -Wempty-body -Wformat-security -Winit-self -Wno-error=deprecated-declarations"
+       ]
+ )
+ 
