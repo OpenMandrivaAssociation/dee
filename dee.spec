@@ -12,6 +12,11 @@ License: LGPLv2+
 Group: System/Libraries
 Source0: http://launchpad.net/dee/1.0/%{version}/+download/dee-%{version}.tar.gz
 URL: https://launchpad.net/dee
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: pkgconfig(dbus-glib-1)
 BuildRequires: pkgconfig(glib-2.0) >= 2.26
 BuildRequires: pkgconfig(gthread-2.0) >= 2.26
